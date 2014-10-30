@@ -21,8 +21,8 @@
     "illuminate/support": "~4.0"
   },
   "autoload": {
-    "psr-4": {
-      "Vimeo\\": "src\\Vinkla\\Vimeo"
+    "psr-0": {
+      "Vinkla\\Vimeo": "src/"
     }
   },
   "minimum-stability": "dev"
