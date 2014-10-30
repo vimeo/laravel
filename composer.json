@@ -25,5 +25,5 @@
       "Vimeo\\": "src\\Vinkla\\Vimeo"
     }
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "dev"
 }
