@@ -33,7 +33,7 @@ If using [Laravel](http://laravel.com) (not required), add the service provider 
 'Vinkla\Vimeo\ViemoServiceProvider'
 ```
 
-If you want you can use the facade for shorter code. Add the class to your aliases array.
+If you want you can use the [facade](http://laravel.com/docs/4.2/facades). Add the reference in ```config/app.php``` to your aliases array.
 ```php
 'Vimeo' => 'Vinkla\Vimeo\Facades\Vimeo'
 ```
