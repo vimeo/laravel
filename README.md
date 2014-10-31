@@ -33,7 +33,7 @@ Require this package in your `composer.json` and update composer.
 If using [Laravel](http://laravel.com) (not required), add the service provider to ```config/app.php``` in the providers array.
 
 ```php
-'Vinkla\Vimeo\ViemoServiceProvider'
+'Vinkla\Vimeo\VimeoServiceProvider'
 ```
 
 If you want you can use the [facade](http://laravel.com/docs/4.2/facades). Add the reference in ```config/app.php``` to your aliases array.
