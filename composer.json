@@ -1,32 +1,25 @@
 {
-  "name": "vinkla/vimeo",
-  "description": "Laravel wrapper for the official Vimeo API.",
-  "homepage": "https://github.com/vinkla/vimeo",
-  "license": "MIT",
-  "keywords": [
-    "laravel",
-    "vimeo",
-    "video"
-  ],
-  "authors": [
-    {
-      "name": "Vincent Klaiber",
-      "email": "me@vinkla.com",
-      "homepage": "http://vinkla.com"
-    }
-  ],
-  "require": {
-    "php": ">=5.4.0",
-    "vimeo/vimeo-api": "~1.0",
-    "illuminate/support": "~4.0"
-  },
-  "require-dev": {
-
-  },
-  "autoload": {
-    "psr-0": {
-      "Vinkla\\Vimeo": "src/"
-    }
-  },
-  "minimum-stability": "dev"
+	"name": "vinkla/vimeo",
+	"description": "Laravel wrapper for the official Vimeo API.",
+	"homepage": "https://github.com/vinkla/vimeo",
+	"license": "MIT",
+	"keywords": ["laravel", "vimeo", "video"],
+	"authors": [
+		{
+			"name": "Vincent Klaiber",
+			"email": "me@vinkla.com",
+			"homepage": "http://vinkla.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"vimeo/vimeo-api": "~1.0",
+		"illuminate/support": "~4.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"Vinkla\\Vimeo": "src/"
+		}
+	},
+	"minimum-stability": "dev"
 }

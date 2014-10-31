@@ -3,10 +3,6 @@ Laravel Vimeo
 ![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/vimeo-package.png)
 Laravel wrapper for the official Vimeo API.
 
-[![Build Status](https://img.shields.io/travis/vinkla/vimeo/master.svg?style=flat)](https://travis-ci.org/vinkla/vimeo)
-[![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/vimeo.svg?style=flat)](https://packagist.org/packages/vinkla/vimeo)
-[![License](https://img.shields.io/packagist/l/vinkla/vimeo.svg?style=flat)](https://packagist.org/packages/vinkla/vimeo)
-
 ## Installation
 Require this package in your `composer.json` and update composer.
 
@@ -36,4 +32,4 @@ php artisan publish:config vinkla/vimeo
 
 ## License
 
-The Base62 package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The Laravel Vimeo package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
