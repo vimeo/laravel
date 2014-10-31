@@ -14,7 +14,7 @@ $vimeo->upload('/home/aaron/foo.mp4', false);
 // Wanna use a facade?
 Vimeo::uploadImage('/videos/123/images', '/home/aaron/bar.png', true);
 ```
-This package gives you an easy way to handle [Vimeo](https://developer.vimeo.com/apps) configuration keys like client identifier and secret. It comes with a Facade and a contract that you can integrate within your project. Happy coding!
+This package gives you an easy way to handle [Vimeo](https://developer.vimeo.com/apps) configuration keys like client identifier and secret. The package includes a Facade and a contract which you can integrate within your project. Happy coding!
 
 ## Installation
 Require this package in your `composer.json` and update composer. 
