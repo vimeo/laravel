@@ -1,7 +1,6 @@
 <?php namespace Vinkla\Vimeo;
 
 use Illuminate\Support\ServiceProvider;
-use Vimeo\Vimeo;
 
 class VimeoServiceProvider extends ServiceProvider {
 
