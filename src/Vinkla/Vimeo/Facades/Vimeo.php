@@ -9,6 +9,9 @@ class Vimeo extends Facade {
 	 *
 	 * @return string
 	 */
-	protected static function getFacadeAccessor() { return 'Vinkla\Vimeo\Contracts\Vimeo'; }
+	protected static function getFacadeAccessor()
+	{
+		return 'Vinkla\Vimeo\Contracts\Vimeo';
+	}
 
 }

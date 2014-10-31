@@ -20,6 +20,9 @@
     "vimeo/vimeo-api": "~1.0",
     "illuminate/support": "~4.0"
   },
+  "require-dev": {
+
+  },
   "autoload": {
     "psr-0": {
       "Vinkla\\Vimeo": "src/"
