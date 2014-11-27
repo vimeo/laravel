@@ -21,7 +21,7 @@ This package gives you an easy way to handle [Vimeo](https://developer.vimeo.com
 [![License](https://img.shields.io/packagist/l/vinkla/vimeo.svg?style=flat)](https://packagist.org/packages/vinkla/vimeo)
 
 ## Installation
-Require this package in your `composer.json` and update composer. 
+Require this package in your `composer.json` and update composer.
 
 ```json
 {
@@ -31,7 +31,7 @@ Require this package in your `composer.json` and update composer.
 }
 ```
 
-If using [Laravel](http://laravel.com) (not required), add the service provider to ```config/app.php``` in the providers array.
+Add the service provider to ```config/app.php``` in the providers array.
 
 ```php
 'Vinkla\Vimeo\VimeoServiceProvider'
