@@ -23,7 +23,7 @@ class VimeoServiceProvider extends ServiceProvider {
 			return new Vimeo(
 				$app['config']['vimeo::client_id'],
 				$app['config']['vimeo::client_secret'],
-				$app['config']['vimeo::access_token'],
+				$app['config']['vimeo::access_token']
 			);
 		});
 	}
