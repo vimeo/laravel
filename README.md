@@ -46,6 +46,9 @@ To add the configuration file to your `app/config/packages` directory, run the c
 ```bash
 php artisan config:publish vinkla/vimeo
 ```
+## Documentation
+
+This a wrapper for the [official Vimeo API package](https://github.com/vimeo/vimeo.php). You can find [the documentation](https://github.com/vimeo/vimeo.php) in their repository. The documentation applies to this package as well. 
 
 ## License
 
