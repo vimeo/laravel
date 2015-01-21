@@ -33,6 +33,7 @@ return [
 	| 
 	| Your applications access token. Can be found on developer.vimeo.com/apps
 	| or generated using OAuth 2.
+	|
 	*/
 
 	'access_token' => null,
