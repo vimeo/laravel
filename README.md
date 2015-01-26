@@ -21,14 +21,10 @@ This package gives you an easy way to handle [Vimeo](https://developer.vimeo.com
 [![License](https://img.shields.io/packagist/l/vinkla/vimeo.svg?style=flat)](https://packagist.org/packages/vinkla/vimeo)
 
 ## Installation
-Require this package in your `composer.json` and update composer.
+Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
-```json
-{
-	"require": {
-		"vinkla/vimeo": "~1.0"
-	}
-}
+```bash
+composer require vinkla/vimeo:~1.0
 ```
 
 Add the service provider to ```config/app.php``` in the providers array.
