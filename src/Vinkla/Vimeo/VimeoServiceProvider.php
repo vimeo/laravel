@@ -10,6 +10,7 @@ class VimeoServiceProvider extends ServiceProvider {
 	 * @var bool
 	 */
 	protected $defer = false;
+
 	/**
 	 * Register the service provider.
 	 *
@@ -17,25 +18,21 @@ class VimeoServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		// Register 'Vimeo' instance container to our Vimeo object.
-		$this->app->bindShared('Vinkla\Vimeo\Contracts\Vimeo', function($app)
+		$source = sprintf('%s/../../config/config.php', __DIR__);
+		$destination = config_path('vimeo.php');
+
+		$this->publishes([$source => $destination]);
+
+		$this->app->singleton('Vinkla\Vimeo\Contracts\Vimeo', function()
 		{
 			return new Vimeo(
-				$app['config']['vimeo::client_id'],
-				$app['config']['vimeo::client_secret'],
-				$app['config']['vimeo::access_token']
+				config('vimeo.client_id'),
+				config('vimeo.client_secret'),
+				config('vimeo.access_token')
 			);
 		});
 	}
-	/**
-	 * Bootstrap the application events.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		$this->package('vinkla/vimeo');
-	}
+
 	/**
 	 * Get the services provided by the provider.
 	 *
