@@ -2,7 +2,7 @@ Laravel Vimeo
 =============
 ![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/vimeo-package.png)
 
-Laravel wrapper for the official Vimeo API. Read more about the API in the official [Vimeo repository](https://github.com/vimeo/vimeo.php).
+Laravel Vimeo is a Vimeo bridge for Laravel 5 using the [official Vimeo package](https://github.com/vimeo/vimeo.php).
 
 ```php
 // Fetching data.
@@ -24,30 +24,101 @@ This package gives you an easy way to handle [Vimeo](https://developer.vimeo.com
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require vinkla/vimeo:~2.0
+composer require "vinkla/vimeo=~2.0"
 ```
 
-Add the service provider to ```config/app.php``` in the providers array.
+Add the service provider to ```config/app.php``` in the `providers` array.
 
 ```php
 'Vinkla\Vimeo\VimeoServiceProvider'
 ```
 
 If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in ```config/app.php``` to your aliases array.
+
 ```php
 'Vimeo' => 'Vinkla\Vimeo\Facades\Vimeo'
 ```
 
-To add the configuration file to your `config` directory, run the command below.
+#### Looking for a laravel 4 compatable version?
+
+Please use `1.0` branch instead. Installable by requiring:
+
+```bash
+composer require "vinkla/vimeo=~1.0"
+```
+
+## Configuration
+
+Laravel Vimeo requires connection configuration.
+
+To get started, you'll need to publish all vendor assets:
 ```bash
 php artisan vendor:publish
 ```
 
-Looking for Laravel 4 support? Please use version `~1.0` instead.
+This will create a `config/vimeo.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
+
+#### Default Connection Name
+
+This option `default` is where you may specify which of the connections below you wish to use as your default connection for all work. Of course, you may use many connections at once using the manager class. The default value for this setting is 'main'.
+
+#### Vimeo Connections
+
+This option `connections` is where each of the connections are setup for your application. Example configuration has been included, but you may add as many connections as you would like.
+
+## Usage
+
+#### VimeoManager
+
+This is the class of most interest. It is bound to the ioc container as `vimeo` and can be accessed using the `Facades\Vimeo facade. This class implements the ManagerInterface by extending AbstractManager. The interface and abstract class are both part of [@GrahamCampbell Laravel Manager](https://github.com/GrahamCampbell/Laravel-Manager) package, so you may want to go and checkout the docs for how to use the manager class over at that repository. Note that the connection class returned will always be an instance of `Vimeo\Vimeo`.
+
+#### Facades\Vimeo
+
+This facade will dynamically pass static method calls to the 'vimeo' object in the ioc container which by default is the `VimeoManager` class.
+
+#### VimeoServiceProvider
+
+This class contains no public methods of interest. This class should be added to the providers array in `config/app.php`. This class will setup ioc bindings.
+
+### Examples
+Here you can see an example of just how simple this package is to use. Out of the box, the default adapter is `main`. After you enter your authentication details in the config file, it will just work:
+
+```php
+// You can alias this in config/app.php.
+use Vinkla\Vimeo\Facades\Vimeo;
+
+Vimeo::request('/me/videos', ['per_page' => 10], 'GET');
+// We're done here - how easy was that, it just works!
+
+Vimeo::upload('/bar.mp4', false);
+// This example is simple and there are far more methods available.
+```
+
+If you prefer to use dependency injection over facades like me, then you can inject the manager:
+
+```php
+use Vinkla\Vimeo\VimeoManager;
+
+class Foo
+{
+	protected $vimeo;
+
+	public function __construct(VimeoManager $vimeo)
+	{
+		$this->vimeo = $vimeo;
+	}
+
+	public function bar()
+	{
+		$this->vimeo->upload('/home/aaron/foo.mp4', false);
+	}
+}
+
+App::make('Foo')->bar();
+```
 
 ## Documentation
-
-This a wrapper for the [official Vimeo API package](https://github.com/vimeo/vimeo.php). You can find [the documentation](https://github.com/vimeo/vimeo.php) in their repository. The documentation applies to this package as well.
+There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the official Vimeo package](https://github.com/vimeo/vimeo.php).
 
 ## License
 
