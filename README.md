@@ -73,7 +73,7 @@ This is the class of most interest. It is bound to the ioc container as `vimeo` 
 
 #### Facades\Vimeo
 
-This facade will dynamically pass static method calls to the 'vimeo' object in the ioc container which by default is the `VimeoManager` class.
+This facade will dynamically pass static method calls to the `vimeo` object in the ioc container which by default is the `VimeoManager` class.
 
 #### VimeoServiceProvider
 
