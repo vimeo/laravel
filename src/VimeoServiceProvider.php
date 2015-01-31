@@ -1,15 +1,23 @@
 <?php namespace Vinkla\Vimeo;
 
 use Illuminate\Support\ServiceProvider;
+use Vimeo\Vimeo;
 
 class VimeoServiceProvider extends ServiceProvider {
 
 	/**
-	 * Indicates if loading of the provider is deferred.
+	 * Boot the service provider.
 	 *
-	 * @var bool
+	 * @return void
 	 */
-	protected $defer = false;
+	public function boot()
+	{
+		$source = realpath(__DIR__.'/../config/vimeo.php');
+
+		$this->publishes([$source => config_path('vimeo.php')]);
+
+		$this->mergeConfigFrom($source, 'vimeo');
+	}
 
 	/**
 	 * Register the service provider.
@@ -18,12 +26,7 @@ class VimeoServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$source = sprintf('%s/../../config/config.php', __DIR__);
-		$destination = config_path('vimeo.php');
-
-		$this->publishes([$source => $destination]);
-
-		$this->app->singleton('Vinkla\Vimeo\Contracts\Vimeo', function()
+		$this->app->singleton('vimeo', function()
 		{
 			return new Vimeo(
 				config('vimeo.client_id'),
@@ -31,6 +34,8 @@ class VimeoServiceProvider extends ServiceProvider {
 				config('vimeo.access_token')
 			);
 		});
+
+		$this->app->alias('vimeo', 'Vimeo\Vimeo');
 	}
 
 	/**
@@ -40,7 +45,7 @@ class VimeoServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return ['Vinkla\Vimeo\Contracts\Vimeo'];
+		return ['vimeo'];
 	}
 
 }

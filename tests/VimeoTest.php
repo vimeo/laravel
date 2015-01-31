@@ -1,5 +1,7 @@
 <?php
 
+use Vimeo\Vimeo;
+
 class VimeoTest extends PHPUnit_Framework_TestCase {
 
 	protected $vimeo;
@@ -10,7 +12,7 @@ class VimeoTest extends PHPUnit_Framework_TestCase {
 
 	public function setUp()
 	{
-		$this->vimeo = new Vinkla\Vimeo\Vimeo(
+		$this->vimeo = new Vimeo(
 			$this->clientId,
 			$this->clientSecret
 		);
