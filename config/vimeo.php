@@ -4,38 +4,42 @@ return [
 
 	/*
 	|--------------------------------------------------------------------------
-	| Client Identifier
+	| Default Connection Name
 	|--------------------------------------------------------------------------
 	|
-	| Your applications client identifier. Used when generating authentication
-	| tokens and to receive your authorization code. The client identifier
+	| Here you may specify which of the connections below you wish to use as
+	| your default connection for all work. Of course, you may use many
+	| connections at once using the manager class.
 	|
 	*/
 
-	'client_id' => '',
+	'default' => 'main',
 
 	/*
-	|--------------------------------------------------------------------------
-	| Client Secret
-	|--------------------------------------------------------------------------
-	|
-	| Your applications client secret. Used when generating authentication
-	| tokens and to receive your authorization code.
-	|
-	*/
+    |--------------------------------------------------------------------------
+    | Vimeo Connections
+    |--------------------------------------------------------------------------
+    |
+    | Here are each of the connections setup for your application. Example
+    | configuration has been included, but you may add as many connections as
+    | you would like.
+    |
+    */
 
-	'client_secret' => '',
+	'connections' => [
 
-	/*
-	|--------------------------------------------------------------------------
-	| Access Token
-	|--------------------------------------------------------------------------
-	| 
-	| Your applications access token. Can be found on developer.vimeo.com/apps
-	| or generated using OAuth 2.
-	|
-	*/
+		'main' => [
+			'client_id' => 'your-client-id',
+			'client_secret' => 'your-client-secret',
+			'access_token' => null
+		],
 
-	'access_token' => null,
+		'alternative' => [
+			'client_id' => 'your-client-id',
+			'client_secret' => 'your-client-secret',
+			'access_token' => null
+		],
+
+	]
 
 ];

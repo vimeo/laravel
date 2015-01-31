@@ -1,7 +1,7 @@
 <?php namespace Vinkla\Vimeo;
 
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
-use Vimeo\Vimeo;
 
 class VimeoServiceProvider extends ServiceProvider {
 
@@ -12,10 +12,18 @@ class VimeoServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
+		$this->setupConfig();
+	}
+
+	/**
+	 * Setup the config.
+	 *
+	 * @return void
+	 */
+	protected function setupConfig()
+	{
 		$source = realpath(__DIR__.'/../config/vimeo.php');
-
 		$this->publishes([$source => config_path('vimeo.php')]);
-
 		$this->mergeConfigFrom($source, 'vimeo');
 	}
 
@@ -26,16 +34,44 @@ class VimeoServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->singleton('vimeo', function()
+		$this->registerFactory($this->app);
+		$this->registerManager($this->app);
+	}
+
+	/**
+	 * Register the factory class.
+	 *
+	 * @param \Illuminate\Contracts\Foundation\Application $app
+	 *
+	 * @return void
+	 */
+	protected function registerFactory(Application $app)
+	{
+		$app->singleton('vimeo.factory', function()
 		{
-			return new Vimeo(
-				config('vimeo.client_id'),
-				config('vimeo.client_secret'),
-				config('vimeo.access_token')
-			);
+			return new Factories\VimeoFactory();
+		});
+		$app->alias('vimeo.factory', 'Vinkla\Vimeo\Factories\VimeoFactory');
+	}
+
+	/**
+	 * Register the manager class.
+	 *
+	 * @param \Illuminate\Contracts\Foundation\Application $app
+	 *
+	 * @return void
+	 */
+	protected function registerManager(Application $app)
+	{
+		$app->singleton('vimeo', function($app)
+		{
+			$config = $app['config'];
+			$factory = $app['vimeo.factory'];
+
+			return new VimeoManager($config, $factory);
 		});
 
-		$this->app->alias('vimeo', 'Vimeo\Vimeo');
+		$app->alias('vimeo', 'Vinkla\Vimeo\VimeoManager');
 	}
 
 	/**
@@ -45,7 +81,10 @@ class VimeoServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return ['vimeo'];
+		return [
+			'vimeo',
+			'vimeo.factory'
+		];
 	}
 
 }
