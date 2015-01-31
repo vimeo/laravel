@@ -93,6 +93,27 @@ Vimeo::upload('/bar.mp4', false);
 // This example is simple and there are far more methods available.
 ```
 
+The Vimeo manager will behave like it is a `Vimeo\Vimeo`. If you want to call specific connections, you can do with the connection method:
+
+```php
+use Vinkla\Vimeo\Facades\Vimeo;
+
+// Writing this…
+Vimeo::connection('main')->upload('/bar.mp4');
+
+// …is identical to writing this
+Vimeo::upload('/bar.mp4');
+
+// and is also identical to writing this.
+Vimeo::connection()->upload('/bar.mp4');
+
+// This is because the main connection is configured to be the default.
+Vimeo::getDefaultConnection(); // This will return main.
+
+// We can change the default connection.
+Vimeo::setDefaultConnection('alternative'); // The default is now alternative.
+```
+
 If you prefer to use dependency injection over facades like me, then you can inject the manager:
 
 ```php
@@ -109,7 +130,7 @@ class Foo
 
 	public function bar()
 	{
-		$this->vimeo->upload('/home/aaron/foo.mp4', false);
+		$this->vimeo->upload('/foo.mp4', false);
 	}
 }
 
