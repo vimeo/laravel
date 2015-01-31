@@ -1,4 +1,4 @@
-<?php namespace Vinkla\Vimeo\Facades; 
+<?php namespace Vinkla\Vimeo\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -11,7 +11,7 @@ class Vimeo extends Facade {
 	 */
 	protected static function getFacadeAccessor()
 	{
-		return 'Vinkla\Vimeo\Contracts\Vimeo';
+		return 'vimeo';
 	}
 
 }

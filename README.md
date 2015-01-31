@@ -24,7 +24,7 @@ This package gives you an easy way to handle [Vimeo](https://developer.vimeo.com
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require vinkla/vimeo:~1.0
+composer require vinkla/vimeo:~2.0
 ```
 
 Add the service provider to ```config/app.php``` in the providers array.
@@ -33,18 +33,21 @@ Add the service provider to ```config/app.php``` in the providers array.
 'Vinkla\Vimeo\VimeoServiceProvider'
 ```
 
-If you want you can use the [facade](http://laravel.com/docs/4.2/facades). Add the reference in ```config/app.php``` to your aliases array.
+If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in ```config/app.php``` to your aliases array.
 ```php
 'Vimeo' => 'Vinkla\Vimeo\Facades\Vimeo'
 ```
 
-To add the configuration file to your `app/config/packages` directory, run the command below.
+To add the configuration file to your `config` directory, run the command below.
 ```bash
-php artisan config:publish vinkla/vimeo
+php artisan vendor:publish
 ```
+
+Looking for Laravel 4 support? Please use version `~1.0` instead.
+
 ## Documentation
 
-This a wrapper for the [official Vimeo API package](https://github.com/vimeo/vimeo.php). You can find [the documentation](https://github.com/vimeo/vimeo.php) in their repository. The documentation applies to this package as well. 
+This a wrapper for the [official Vimeo API package](https://github.com/vimeo/vimeo.php). You can find [the documentation](https://github.com/vimeo/vimeo.php) in their repository. The documentation applies to this package as well.
 
 ## License
 
