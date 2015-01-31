@@ -39,7 +39,7 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 'Vimeo' => 'Vinkla\Vimeo\Facades\Vimeo'
 ```
 
-#### Looking for a laravel 4 compatable version?
+#### Looking for a Laravel 4 compatable version?
 
 Please use `1.0` branch instead. Installable by requiring:
 
