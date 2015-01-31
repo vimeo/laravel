@@ -49,9 +49,8 @@ composer require "vinkla/vimeo=~1.0"
 
 ## Configuration
 
-Laravel Vimeo requires connection configuration.
+Laravel Vimeo requires connection configuration. To get started, you'll need to publish all vendor assets:
 
-To get started, you'll need to publish all vendor assets:
 ```bash
 php artisan vendor:publish
 ```
