@@ -2,7 +2,7 @@ Laravel Vimeo
 =============
 ![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/vimeo-package.png)
 
-Laravel Vimeo is a Vimeo bridge for Laravel 5 using the [official Vimeo package](https://github.com/vimeo/vimeo.php).
+Laravel Vimeo is an Vimeo bridge for Laravel 5 using the [official Vimeo package](https://github.com/vimeo/vimeo.php).
 
 ```php
 // Fetching data.
@@ -11,7 +11,7 @@ $vimeo->request('/users/dashron', ['per_page' => 2], 'GET');
 // Upload videos.
 $vimeo->upload('/home/aaron/foo.mp4', false);
 
-// Wanna use a facade?
+// Want to use a facade?
 Vimeo::uploadImage('/videos/123/images', '/home/aaron/bar.png', true);
 ```
 This package gives you an easy way to handle [Vimeo](https://developer.vimeo.com/apps) configuration keys like client identifier and secret. The package includes a Facade and a contract which you can integrate within your project. Happy coding!
@@ -59,7 +59,7 @@ This will create a `config/vimeo.php` file in your app that you can modify to se
 
 #### Default Connection Name
 
-This option `default` is where you may specify which of the connections below you wish to use as your default connection for all work. Of course, you may use many connections at once using the manager class. The default value for this setting is 'main'.
+This option `default` is where you may specify which of the connections below you wish to use as your default connection for all work. Of course, you may use many connections at once using the manager class. The default value for this setting is `main`.
 
 #### Vimeo Connections
 
@@ -93,7 +93,7 @@ Vimeo::upload('/bar.mp4', false);
 // This example is simple and there are far more methods available.
 ```
 
-The Vimeo manager will behave like it is a `Vimeo\Vimeo`. If you want to call specific connections, you can do with the connection method:
+The Vimeo manager will behave like it is a `Vimeo\Vimeo`. If you want to call specific connections, you can do that with the connection method:
 
 ```php
 use Vinkla\Vimeo\Facades\Vimeo;
