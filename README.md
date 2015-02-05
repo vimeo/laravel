@@ -24,7 +24,7 @@ This package gives you an easy way to handle [Vimeo](https://developer.vimeo.com
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require "vinkla/vimeo=~2.0"
+composer require vinkla/vimeo:~2.0
 ```
 
 Add the service provider to ```config/app.php``` in the `providers` array.
@@ -44,7 +44,7 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 Please use `1.0` branch instead. Installable by requiring:
 
 ```bash
-composer require "vinkla/vimeo=~1.0"
+composer require vinkla/vimeo:~1.0
 ```
 
 ## Configuration
