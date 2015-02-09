@@ -1,10 +1,12 @@
-<?php namespace Vinkla\Tests\Vimeo\Facades;
+<?php
+
+namespace Vinkla\Tests\Vimeo\Facades;
 
 use GrahamCampbell\TestBench\Traits\FacadeTestCaseTrait;
 use Vinkla\Tests\Vimeo\AbstractTestCase;
 
-class VimeoTest extends AbstractTestCase {
-
+class VimeoTest extends AbstractTestCase
+{
 	use FacadeTestCaseTrait;
 
 	/**
@@ -36,5 +38,4 @@ class VimeoTest extends AbstractTestCase {
 	{
 		return 'Vinkla\Vimeo\VimeoManager';
 	}
-
 }

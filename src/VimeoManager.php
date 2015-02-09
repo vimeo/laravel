@@ -1,11 +1,13 @@
-<?php namespace Vinkla\Vimeo;
+<?php
+
+namespace Vinkla\Vimeo;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 use Vinkla\Vimeo\Factories\VimeoFactory;
 
-class VimeoManager extends AbstractManager {
-
+class VimeoManager extends AbstractManager
+{
 	/**
 	 * @var VimeoFactory
 	 */
@@ -53,5 +55,4 @@ class VimeoManager extends AbstractManager {
 	{
 		return $this->factory;
 	}
-
 }

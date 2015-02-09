@@ -1,10 +1,12 @@
-<?php namespace Vinkla\Tests\Vimeo\Factories;
+<?php
+
+namespace Vinkla\Tests\Vimeo\Factories;
 
 use Vinkla\Vimeo\Factories\VimeoFactory;
 use Vinkla\Tests\Vimeo\AbstractTestCase;
 
-class VimeoFactoryTest extends AbstractTestCase {
-
+class VimeoFactoryTest extends AbstractTestCase
+{
 	public function testMakeStandard()
 	{
 		$factory = $this->getVimeoFactory();
@@ -32,5 +34,4 @@ class VimeoFactoryTest extends AbstractTestCase {
 	{
 		return new VimeoFactory();
 	}
-
 }

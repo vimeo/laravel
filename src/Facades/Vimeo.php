@@ -1,9 +1,11 @@
-<?php namespace Vinkla\Vimeo\Facades;
+<?php
+
+namespace Vinkla\Vimeo\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Vimeo extends Facade {
-
+class Vimeo extends Facade
+{
 	/**
 	 * Get the registered name of the component.
 	 *
@@ -13,5 +15,4 @@ class Vimeo extends Facade {
 	{
 		return 'vimeo';
 	}
-
 }

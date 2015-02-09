@@ -1,10 +1,12 @@
-<?php namespace Vinkla\Vimeo;
+<?php
+
+namespace Vinkla\Vimeo;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
-class VimeoServiceProvider extends ServiceProvider {
-
+class VimeoServiceProvider extends ServiceProvider
+{
 	/**
 	 * Boot the service provider.
 	 *
@@ -86,5 +88,4 @@ class VimeoServiceProvider extends ServiceProvider {
 			'vimeo.factory'
 		];
 	}
-
 }

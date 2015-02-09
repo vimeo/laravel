@@ -1,11 +1,13 @@
-<?php namespace Vinkla\Tests\Vimeo;
+<?php
+
+namespace Vinkla\Tests\Vimeo;
 
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use Mockery;
 use Vinkla\Vimeo\VimeoManager;
 
-class VimeoManagerTest extends AbstractTestBenchTestCase {
-
+class VimeoManagerTest extends AbstractTestBenchTestCase
+{
 	public function testCreateConnection()
 	{
 		$config = ['path' => __DIR__];
@@ -41,5 +43,4 @@ class VimeoManagerTest extends AbstractTestBenchTestCase {
 
 		return $manager;
 	}
-
 }

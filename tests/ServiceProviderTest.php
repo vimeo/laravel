@@ -1,9 +1,11 @@
-<?php namespace Vinkla\Tests\Vimeo;
+<?php
+
+namespace Vinkla\Tests\Vimeo;
 
 use GrahamCampbell\TestBench\Traits\ServiceProviderTestCaseTrait;
 
-class ServiceProviderTest extends AbstractTestCase {
-
+class ServiceProviderTest extends AbstractTestCase
+{
 	use ServiceProviderTestCaseTrait;
 
 	public function testVimeoFactoryIsInjectable()
@@ -15,5 +17,4 @@ class ServiceProviderTest extends AbstractTestCase {
 	{
 		$this->assertIsInjectable('Vinkla\Vimeo\VimeoManager');
 	}
-
 }
