@@ -2,7 +2,7 @@ Laravel Vimeo
 =============
 ![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/vimeo-package.png)
 
-Laravel Vimeo is a Vimeo bridge for Laravel 5 using the [official Vimeo package](https://github.com/vimeo/vimeo.php).
+Laravel [Vimeo](https://vimeo.com/) is a [Vimeo](https://vimeo.com/) bridge for Laravel 5 using the [official Vimeo package](https://github.com/vimeo/vimeo.php).
 
 ```php
 // Fetching data.
