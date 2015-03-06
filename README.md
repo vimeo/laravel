@@ -119,7 +119,8 @@ If you prefer to use dependency injection over facades like me, then you can inj
 ```php
 use Vinkla\Vimeo\VimeoManager;
 
-class Foo {
+class Foo
+{
 	protected $vimeo;
 
 	public function __construct(VimeoManager $vimeo)
