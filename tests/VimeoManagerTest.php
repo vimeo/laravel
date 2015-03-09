@@ -8,39 +8,39 @@ use Vinkla\Vimeo\VimeoManager;
 
 class VimeoManagerTest extends AbstractTestBenchTestCase
 {
-	public function testCreateConnection()
-	{
-		$config = ['path' => __DIR__];
+    public function testCreateConnection()
+    {
+        $config = ['path' => __DIR__];
 
-		$manager = $this->getManager($config);
+        $manager = $this->getManager($config);
 
-		$manager->getConfig()->shouldReceive('get')->once()
-			->with('vimeo.default')->andReturn('vimeo');
+        $manager->getConfig()->shouldReceive('get')->once()
+            ->with('vimeo.default')->andReturn('vimeo');
 
-		$this->assertSame([], $manager->getConnections());
+        $this->assertSame([], $manager->getConnections());
 
-		$return = $manager->connection();
+        $return = $manager->connection();
 
-		$this->assertInstanceOf('Vimeo\Vimeo', $return);
+        $this->assertInstanceOf('Vimeo\Vimeo', $return);
 
-		$this->assertArrayHasKey('vimeo', $manager->getConnections());
-	}
+        $this->assertArrayHasKey('vimeo', $manager->getConnections());
+    }
 
-	protected function getManager(array $config)
-	{
-		$repository = Mockery::mock('Illuminate\Contracts\Config\Repository');
-		$factory = Mockery::mock('Vinkla\Vimeo\Factories\VimeoFactory');
+    protected function getManager(array $config)
+    {
+        $repository = Mockery::mock('Illuminate\Contracts\Config\Repository');
+        $factory = Mockery::mock('Vinkla\Vimeo\Factories\VimeoFactory');
 
-		$manager = new VimeoManager($repository, $factory);
+        $manager = new VimeoManager($repository, $factory);
 
-		$manager->getConfig()->shouldReceive('get')->once()
-			->with('vimeo.connections')->andReturn(['vimeo' => $config]);
+        $manager->getConfig()->shouldReceive('get')->once()
+            ->with('vimeo.connections')->andReturn(['vimeo' => $config]);
 
-		$config['name'] = 'vimeo';
+        $config['name'] = 'vimeo';
 
-		$manager->getFactory()->shouldReceive('make')->once()
-			->with($config)->andReturn(Mockery::mock('Vimeo\Vimeo'));
+        $manager->getFactory()->shouldReceive('make')->once()
+            ->with($config)->andReturn(Mockery::mock('Vimeo\Vimeo'));
 
-		return $manager;
-	}
+        return $manager;
+    }
 }
