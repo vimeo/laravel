@@ -30,7 +30,7 @@ class VimeoFactory
      *
      * @throws \InvalidArgumentException
      *
-     * @return string
+     * @return array
      */
     protected function getConfig(array $config)
     {
@@ -38,7 +38,7 @@ class VimeoFactory
 
         foreach ($keys as $key) {
             if (!array_key_exists($key, $config)) {
-                throw new \InvalidArgumentException('The Vimeo client requires authentication.');
+                throw new \InvalidArgumentException('The Vimeo client requires configuration.');
             }
         }
 
