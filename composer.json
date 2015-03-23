@@ -1,14 +1,12 @@
 {
 	"name": "vinkla/vimeo",
 	"description": "Laravel wrapper for the official Vimeo API.",
-	"homepage": "https://github.com/vinkla/vimeo",
 	"license": "MIT",
 	"keywords": ["laravel", "vimeo", "video"],
 	"authors": [
 		{
 			"name": "Vincent Klaiber",
-			"email": "hello@vinkla.com",
-			"homepage": "https://vinkla.com"
+			"email": "hello@vinkla.com"
 		}
 	],
 	"require": {
