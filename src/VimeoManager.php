@@ -1,11 +1,25 @@
 <?php
 
+/*
+ * This file is part of Laravel Vimeo.
+ *
+ * (c) Vincent Klaiber <hello@vinkla.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Vinkla\Vimeo;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 use Vinkla\Vimeo\Factories\VimeoFactory;
 
+/**
+ * This is the Vimeo manager class.
+ *
+ * @author Vincent Klaiber <hello@vinkla.com>
+ */
 class VimeoManager extends AbstractManager
 {
     /**

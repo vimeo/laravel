@@ -1,10 +1,24 @@
 <?php
 
+/*
+ * This file is part of Laravel Vimeo.
+ *
+ * (c) Vincent Klaiber <hello@vinkla.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Vinkla\Tests\Vimeo\Facades;
 
 use GrahamCampbell\TestBench\Traits\FacadeTestCaseTrait;
 use Vinkla\Tests\Vimeo\AbstractTestCase;
 
+/**
+ * This is the Vimeo facade test class.
+ *
+ * @author Vincent Klaiber <hello@vinkla.com>
+ */
 class VimeoTest extends AbstractTestCase
 {
     use FacadeTestCaseTrait;
