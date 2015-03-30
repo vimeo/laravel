@@ -25,7 +25,7 @@ This package gives you an easy way to handle [Vimeo](https://developer.vimeo.com
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require vinkla/vimeo:~2.0
+composer require vinkla/vimeo
 ```
 
 Add the service provider to ```config/app.php``` in the `providers` array.
