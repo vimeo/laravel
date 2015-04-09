@@ -18,7 +18,7 @@ This package gives you an easy way to handle [Vimeo](https://developer.vimeo.com
 
 [![Build Status](https://img.shields.io/travis/vinkla/vimeo/master.svg?style=flat)](https://travis-ci.org/vinkla/vimeo)
 [![StyleCI](https://styleci.io/repos/25986926/shield?style=flat)](https://styleci.io/repos/25986926)
-[![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/vimeo.svg?style=flat)](https://packagist.org/packages/vinkla/vimeo)
+[![Latest Version](https://img.shields.io/github/release/vinkla/vimeo.svg?style=flat)](https://github.com/vinkla/vimeo/releases)
 [![License](https://img.shields.io/packagist/l/vinkla/vimeo.svg?style=flat)](https://packagist.org/packages/vinkla/vimeo)
 
 ## Installation
