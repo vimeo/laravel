@@ -41,8 +41,23 @@ class VimeoFactoryTest extends AbstractTestCase
     {
         $factory = $this->getVimeoFactory();
 
-        $factory->make([]);
+        $factory->make([
+            'client_secret' => 'your-client-secret',
+        ]);
     }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testMakeWithoutClientSecret()
+    {
+        $factory = $this->getVimeoFactory();
+
+        $factory->make([
+            'client_id' => 'your-client-id',
+        ]);
+    }
+
 
     protected function getVimeoFactory()
     {

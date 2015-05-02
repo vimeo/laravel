@@ -39,7 +39,9 @@ class VimeoServiceProvider extends ServiceProvider
     protected function setupConfig()
     {
         $source = realpath(__DIR__.'/../config/vimeo.php');
+
         $this->publishes([$source => config_path('vimeo.php')]);
+
         $this->mergeConfigFrom($source, 'vimeo');
     }
 
@@ -66,6 +68,7 @@ class VimeoServiceProvider extends ServiceProvider
         $app->singleton('vimeo.factory', function () {
             return new Factories\VimeoFactory();
         });
+
         $app->alias('vimeo.factory', 'Vinkla\Vimeo\Factories\VimeoFactory');
     }
 

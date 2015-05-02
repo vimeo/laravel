@@ -23,13 +23,19 @@ use Vinkla\Vimeo\Factories\VimeoFactory;
 class VimeoManager extends AbstractManager
 {
     /**
-     * @var VimeoFactory
+     * The factory instance.
+     *
+     * @var \Vinkla\Vimeo\Factories\VimeoFactory
      */
     private $factory;
 
     /**
-     * @param Repository $config
-     * @param VimeoFactory $factory
+     * Create a new Vimeo manager instance.
+     *
+     * @param \Illuminate\Contracts\Config\Repository $config
+     * @param \Vinkla\Vimeo\Factories\VimeoFactory $factory
+     *
+     * @return void
      */
     public function __construct(Repository $config, VimeoFactory $factory)
     {
@@ -63,7 +69,7 @@ class VimeoManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return VimeoFactory
+     * @return \Vinkla\Vimeo\Factories\VimeoFactory
      */
     public function getFactory()
     {

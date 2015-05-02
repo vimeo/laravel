@@ -24,17 +24,14 @@ class VimeoFactory
      * Make a new Vimeo client.
      *
      * @param array $config
-     * @return Vimeo
+     *
+     * @return \Vimeo\Vimeo
      */
     public function make(array $config)
     {
         $config = $this->getConfig($config);
 
-        return new Vimeo(
-            $config['client_id'],
-            $config['client_secret'],
-            $config['access_token']
-        );
+        return $this->getClient($config);
     }
 
     /**
@@ -57,5 +54,21 @@ class VimeoFactory
         }
 
         return array_only($config, ['client_id', 'client_secret', 'access_token']);
+    }
+
+    /**
+     * Get the Vimeo client.
+     *
+     * @param array $auth
+     *
+     * @return \Vimeo\Vimeo
+     */
+    protected function getClient(array $auth)
+    {
+        return new Vimeo(
+            $auth['client_id'],
+            $auth['client_secret'],
+            $auth['access_token']
+        );
     }
 }
