@@ -14,7 +14,7 @@
 		"illuminate/contracts": "5.0.*|5.1.*",
 		"illuminate/support": "5.0.*|5.1.*",
 		"graham-campbell/manager": "~2.1",
-		"vimeo/vimeo-api": "1.1.*"
+		"vimeo/vimeo-api": "~1.0"
 	},
 	"require-dev": {
 		"graham-campbell/testbench": "~2.1"
