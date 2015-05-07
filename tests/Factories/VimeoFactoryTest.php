@@ -11,8 +11,8 @@
 
 namespace Vinkla\Tests\Vimeo\Factories;
 
-use Vinkla\Vimeo\Factories\VimeoFactory;
 use Vinkla\Tests\Vimeo\AbstractTestCase;
+use Vinkla\Vimeo\Factories\VimeoFactory;
 
 /**
  * This is the Vimeo factory test class.
@@ -28,7 +28,7 @@ class VimeoFactoryTest extends AbstractTestCase
         $return = $factory->make([
             'client_id' => 'your-client-id',
             'client_secret' => 'your-client-secret',
-            'access_token' => null
+            'access_token' => null,
         ]);
 
         $this->assertInstanceOf('Vimeo\Vimeo', $return);
@@ -57,7 +57,6 @@ class VimeoFactoryTest extends AbstractTestCase
             'client_id' => 'your-client-id',
         ]);
     }
-
 
     protected function getVimeoFactory()
     {

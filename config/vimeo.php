@@ -40,13 +40,13 @@ return [
         'main' => [
             'client_id' => 'your-client-id',
             'client_secret' => 'your-client-secret',
-            'access_token' => null
+            'access_token' => null,
         ],
 
         'alternative' => [
             'client_id' => 'your-client-id',
             'client_secret' => 'your-client-secret',
-            'access_token' => null
+            'access_token' => null,
         ],
 
     ],

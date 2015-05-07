@@ -100,7 +100,7 @@ class VimeoServiceProvider extends ServiceProvider
     {
         return [
             'vimeo',
-            'vimeo.factory'
+            'vimeo.factory',
         ];
     }
 }
