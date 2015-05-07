@@ -41,14 +41,6 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 'Vimeo' => 'Vinkla\Vimeo\Facades\Vimeo'
 ```
 
-#### Looking for a Laravel 4 compatable version?
-
-Please use [1.0 branch](https://github.com/vinkla/vimeo/tree/1.0) instead. Installable by requiring:
-
-```bash
-composer require vinkla/vimeo:~1.0
-```
-
 ## Configuration
 
 Laravel Vimeo requires connection configuration. To get started, you'll need to publish all vendor assets:
