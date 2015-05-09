@@ -1,6 +1,6 @@
 {
 	"name": "vinkla/vimeo",
-	"description": "Laravel wrapper for the official Vimeo API.",
+	"description": "A Vimeo bridge for Laravel",
 	"license": "MIT",
 	"keywords": ["laravel", "vimeo", "video"],
 	"authors": [
