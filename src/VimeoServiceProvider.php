@@ -40,7 +40,9 @@ class VimeoServiceProvider extends ServiceProvider
     {
         $source = realpath(__DIR__.'/../config/vimeo.php');
 
-        $this->publishes([$source => config_path('vimeo.php')]);
+        if (class_exists('Illuminate\Foundation\Application', false)) {
+            $this->publishes([$source => config_path('vimeo.php')]);
+        }
 
         $this->mergeConfigFrom($source, 'vimeo');
     }
