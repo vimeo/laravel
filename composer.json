@@ -29,6 +29,9 @@
 			"Vinkla\\Tests\\Vimeo\\": "tests/"
 		}
 	},
+	"config": {
+	    "preferred-install": "dist"
+	},
 	"extra": {
 	    "branch-alias": {
 	        "dev-master": "2.1-dev"
