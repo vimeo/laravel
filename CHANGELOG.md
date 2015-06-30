@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 3.0.0 (released 2015-06-30)
+
+- Official Lumen support
+- Code cleanup
+- Moved the factory
+- Container binding improvements
+
 ## 2.1.0 (released 2015-05-07)
 
 - Support both Laravel 5.0 and 5.1
