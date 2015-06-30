@@ -11,7 +11,7 @@
 
 namespace Vinkla\Tests\Vimeo\Facades;
 
-use GrahamCampbell\TestBench\Traits\FacadeTestCaseTrait;
+use GrahamCampbell\TestBenchCore\FacadeTrait;
 use Vinkla\Tests\Vimeo\AbstractTestCase;
 
 /**
@@ -21,7 +21,7 @@ use Vinkla\Tests\Vimeo\AbstractTestCase;
  */
 class VimeoTest extends AbstractTestCase
 {
-    use FacadeTestCaseTrait;
+    use FacadeTrait;
 
     /**
      * Get the facade accessor.
