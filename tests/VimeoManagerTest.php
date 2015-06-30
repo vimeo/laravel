@@ -12,7 +12,10 @@
 namespace Vinkla\Tests\Vimeo;
 
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
+use Illuminate\Contracts\Config\Repository;
 use Mockery;
+use Vimeo\Vimeo;
+use Vinkla\Vimeo\VimeoFactory;
 use Vinkla\Vimeo\VimeoManager;
 
 /**
@@ -35,15 +38,15 @@ class VimeoManagerTest extends AbstractTestBenchTestCase
 
         $return = $manager->connection();
 
-        $this->assertInstanceOf('Vimeo\Vimeo', $return);
+        $this->assertInstanceOf(Vimeo::class, $return);
 
         $this->assertArrayHasKey('vimeo', $manager->getConnections());
     }
 
     protected function getManager(array $config)
     {
-        $repository = Mockery::mock('Illuminate\Contracts\Config\Repository');
-        $factory = Mockery::mock('Vinkla\Vimeo\VimeoFactory');
+        $repository = Mockery::mock(Repository::class);
+        $factory = Mockery::mock(VimeoFactory::class);
 
         $manager = new VimeoManager($repository, $factory);
 
@@ -53,7 +56,7 @@ class VimeoManagerTest extends AbstractTestBenchTestCase
         $config['name'] = 'vimeo';
 
         $manager->getFactory()->shouldReceive('make')->once()
-            ->with($config)->andReturn(Mockery::mock('Vimeo\Vimeo'));
+            ->with($config)->andReturn(Mockery::mock(Vimeo::class));
 
         return $manager;
     }

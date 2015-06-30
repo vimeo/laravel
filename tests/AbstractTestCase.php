@@ -12,6 +12,7 @@
 namespace Vinkla\Tests\Vimeo;
 
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
+use Vinkla\Vimeo\VimeoServiceProvider;
 
 /**
  * This is the abstract test case class.
@@ -29,6 +30,6 @@ abstract class AbstractTestCase extends AbstractPackageTestCase
      */
     protected function getServiceProviderClass($app)
     {
-        return 'Vinkla\Vimeo\VimeoServiceProvider';
+        return VimeoServiceProvider::class;
     }
 }

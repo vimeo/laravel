@@ -68,10 +68,10 @@ class VimeoServiceProvider extends ServiceProvider
     protected function registerFactory(Application $app)
     {
         $app->singleton('vimeo.factory', function () {
-            return new \Vinkla\Vimeo\VimeoFactory();
+            return new VimeoFactory();
         });
 
-        $app->alias('vimeo.factory', 'Vinkla\Vimeo\VimeoFactory');
+        $app->alias('vimeo.factory', VimeoFactory::class);
     }
 
     /**
@@ -90,7 +90,7 @@ class VimeoServiceProvider extends ServiceProvider
             return new VimeoManager($config, $factory);
         });
 
-        $app->alias('vimeo', 'Vinkla\Vimeo\VimeoManager');
+        $app->alias('vimeo', VimeoManager::class);
     }
 
     /**

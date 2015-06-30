@@ -12,7 +12,9 @@
 namespace Vinkla\Tests\Vimeo\Facades;
 
 use GrahamCampbell\TestBenchCore\FacadeTrait;
+use Vimeo\Vimeo;
 use Vinkla\Tests\Vimeo\AbstractTestCase;
+use Vinkla\Vimeo\VimeoManager;
 
 /**
  * This is the Vimeo facade test class.
@@ -40,7 +42,7 @@ class VimeoTest extends AbstractTestCase
      */
     protected function getFacadeClass()
     {
-        return 'Vinkla\Vimeo\Facades\Vimeo';
+        return Vimeo::class;
     }
 
     /**
@@ -50,6 +52,6 @@ class VimeoTest extends AbstractTestCase
      */
     protected function getFacadeRoot()
     {
-        return 'Vinkla\Vimeo\VimeoManager';
+        return VimeoManager::class;
     }
 }

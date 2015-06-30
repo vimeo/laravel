@@ -11,7 +11,8 @@
 
 namespace Vinkla\Tests\Vimeo;
 
-
+use Vimeo\Vimeo;
+use Vinkla\Vimeo\VimeoFactory;
 
 /**
  * This is the Vimeo factory test class.
@@ -30,7 +31,7 @@ class VimeoFactoryTest extends AbstractTestCase
             'access_token' => null,
         ]);
 
-        $this->assertInstanceOf('Vimeo\Vimeo', $return);
+        $this->assertInstanceOf(Vimeo::class, $return);
     }
 
     /**
@@ -59,6 +60,6 @@ class VimeoFactoryTest extends AbstractTestCase
 
     protected function getVimeoFactory()
     {
-        return new \Vinkla\Vimeo\VimeoFactory();
+        return new VimeoFactory();
     }
 }

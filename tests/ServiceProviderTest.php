@@ -12,6 +12,8 @@
 namespace Vinkla\Tests\Vimeo;
 
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
+use Vinkla\Vimeo\VimeoFactory;
+use Vinkla\Vimeo\VimeoManager;
 
 /**
  * This is the service provider test class.
@@ -24,11 +26,11 @@ class ServiceProviderTest extends AbstractTestCase
 
     public function testVimeoFactoryIsInjectable()
     {
-        $this->assertIsInjectable('Vinkla\Vimeo\VimeoFactory');
+        $this->assertIsInjectable(VimeoFactory::class);
     }
 
     public function testVimeoManagerIsInjectable()
     {
-        $this->assertIsInjectable('Vinkla\Vimeo\VimeoManager');
+        $this->assertIsInjectable(VimeoManager::class);
     }
 }
