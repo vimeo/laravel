@@ -24,7 +24,7 @@ class ServiceProviderTest extends AbstractTestCase
 
     public function testVimeoFactoryIsInjectable()
     {
-        $this->assertIsInjectable('Vinkla\Vimeo\Factories\VimeoFactory');
+        $this->assertIsInjectable('Vinkla\Vimeo\VimeoFactory');
     }
 
     public function testVimeoManagerIsInjectable()

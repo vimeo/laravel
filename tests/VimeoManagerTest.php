@@ -43,7 +43,7 @@ class VimeoManagerTest extends AbstractTestBenchTestCase
     protected function getManager(array $config)
     {
         $repository = Mockery::mock('Illuminate\Contracts\Config\Repository');
-        $factory = Mockery::mock('Vinkla\Vimeo\Factories\VimeoFactory');
+        $factory = Mockery::mock('Vinkla\Vimeo\VimeoFactory');
 
         $manager = new VimeoManager($repository, $factory);
 

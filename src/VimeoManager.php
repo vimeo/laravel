@@ -13,7 +13,6 @@ namespace Vinkla\Vimeo;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
-use Vinkla\Vimeo\Factories\VimeoFactory;
 
 /**
  * This is the Vimeo manager class.
@@ -25,7 +24,7 @@ class VimeoManager extends AbstractManager
     /**
      * The factory instance.
      *
-     * @var \Vinkla\Vimeo\Factories\VimeoFactory
+     * @var \Vinkla\Vimeo\VimeoFactory
      */
     private $factory;
 
@@ -33,7 +32,7 @@ class VimeoManager extends AbstractManager
      * Create a new Vimeo manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \Vinkla\Vimeo\Factories\VimeoFactory $factory
+     * @param \Vinkla\Vimeo\VimeoFactory $factory
      *
      * @return void
      */
@@ -69,7 +68,7 @@ class VimeoManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return \Vinkla\Vimeo\Factories\VimeoFactory
+     * @return \Vinkla\Vimeo\VimeoFactory
      */
     public function getFactory()
     {

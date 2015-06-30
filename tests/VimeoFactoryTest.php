@@ -9,10 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Vinkla\Tests\Vimeo\Factories;
+namespace Vinkla\Tests\Vimeo;
 
-use Vinkla\Tests\Vimeo\AbstractTestCase;
-use Vinkla\Vimeo\Factories\VimeoFactory;
+
 
 /**
  * This is the Vimeo factory test class.
@@ -60,6 +59,6 @@ class VimeoFactoryTest extends AbstractTestCase
 
     protected function getVimeoFactory()
     {
-        return new VimeoFactory();
+        return new \Vinkla\Vimeo\VimeoFactory();
     }
 }

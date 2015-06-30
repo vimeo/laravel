@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Vinkla\Vimeo\Factories;
+namespace Vinkla\Vimeo;
 
 use Vimeo\Vimeo;
 
