@@ -13,6 +13,7 @@ namespace Vinkla\Vimeo;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
+use Vimeo\Vimeo;
 
 /**
  * This is the Vimeo service provider class.
@@ -56,6 +57,7 @@ class VimeoServiceProvider extends ServiceProvider
     {
         $this->registerFactory($this->app);
         $this->registerManager($this->app);
+        $this->registerBindings($this->app);
     }
 
     /**
@@ -94,15 +96,34 @@ class VimeoServiceProvider extends ServiceProvider
     }
 
     /**
+     * Register the bindings.
+     *
+     * @param \Illuminate\Contracts\Foundation\Application $app
+     *
+     * @return void
+     */
+    protected function registerBindings(Application $app)
+    {
+        $app->bind('vimeo.connection', function ($app) {
+            $manager = $app['vimeo'];
+
+            return $manager->connection();
+        });
+
+        $app->alias('vimeo.connection', Vimeo::class);
+    }
+
+    /**
      * Get the services provided by the provider.
      *
-     * @return array
+     * @return string[]
      */
     public function provides()
     {
         return [
             'vimeo',
             'vimeo.factory',
+            'vimeo.connection',
         ];
     }
 }

@@ -12,8 +12,8 @@
 namespace Vinkla\Tests\Vimeo\Facades;
 
 use GrahamCampbell\TestBenchCore\FacadeTrait;
-use Vimeo\Vimeo;
 use Vinkla\Tests\Vimeo\AbstractTestCase;
+use Vinkla\Vimeo\Facades\Vimeo;
 use Vinkla\Vimeo\VimeoManager;
 
 /**
