@@ -43,7 +43,7 @@ class VimeoServiceProvider extends ServiceProvider
     {
         $source = realpath(__DIR__.'/../config/vimeo.php');
 
-        if (class_exists('Illuminate\Foundation\Application', false)) {
+        if (class_exists('Illuminate\Foundation\Application', false) && $app->runningInConsole()) {
             $this->publishes([$source => config_path('vimeo.php')]);
         } elseif (class_exists('Laravel\Lumen\Application', false)) {
             $app->configure('vimeo');
