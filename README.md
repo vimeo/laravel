@@ -30,13 +30,13 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 composer require vinkla/vimeo
 ```
 
-Add the service provider to ```config/app.php``` in the `providers` array.
+Add the service provider to `config/app.php` in the `providers` array.
 
 ```php
 Vinkla\Vimeo\VimeoServiceProvider::class
 ```
 
-If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in ```config/app.php``` to your aliases array.
+If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in `config/app.php` to your aliases array.
 
 ```php
 'Vimeo' => Vinkla\Vimeo\Facades\Vimeo::class
