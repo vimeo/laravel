@@ -11,6 +11,7 @@
 
 namespace Vinkla\Vimeo;
 
+use InvalidArgumentException;
 use Vimeo\Vimeo;
 
 /**
@@ -49,7 +50,7 @@ class VimeoFactory
 
         foreach ($keys as $key) {
             if (!array_key_exists($key, $config)) {
-                throw new \InvalidArgumentException('The Vimeo client requires configuration.');
+                throw new InvalidArgumentException("Missing configuration key [$key].");
             }
         }
 
