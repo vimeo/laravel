@@ -1,7 +1,7 @@
 Laravel Vimeo
 =============
 
-![laravel-vimeo](https://cloud.githubusercontent.com/assets/499192/7440609/c9d28524-f0bf-11e4-849d-6d48be206929.png)
+![vimeo](https://cloud.githubusercontent.com/assets/499192/11158771/b3f80b2c-8a5a-11e5-82e5-5db4be19b4ce.png)
 
 Laravel [Vimeo](https://vimeo.com/) is a [Vimeo](https://vimeo.com/) bridge for Laravel 5 using the [official Vimeo package](https://github.com/vimeo/vimeo.php).
 
