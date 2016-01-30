@@ -11,7 +11,7 @@
 
 namespace Vinkla\Vimeo;
 
-use Illuminate\Contracts\Container\Container as Application;
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Lumen\Application as LumenApplication;
@@ -59,62 +59,56 @@ class VimeoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerFactory($this->app);
-        $this->registerManager($this->app);
-        $this->registerBindings($this->app);
+        $this->registerFactory();
+        $this->registerManager();
+        $this->registerBindings();
     }
 
     /**
      * Register the factory class.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerFactory(Application $app)
+    protected function registerFactory()
     {
-        $app->singleton('vimeo.factory', function () {
+        $this->app->singleton('vimeo.factory', function () {
             return new VimeoFactory();
         });
 
-        $app->alias('vimeo.factory', VimeoFactory::class);
+        $this->app->alias('vimeo.factory', VimeoFactory::class);
     }
 
     /**
      * Register the manager class.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerManager(Application $app)
+    protected function registerManager()
     {
-        $app->singleton('vimeo', function ($app) {
+        $this->app->singleton('vimeo', function (Container $app) {
             $config = $app['config'];
             $factory = $app['vimeo.factory'];
 
             return new VimeoManager($config, $factory);
         });
 
-        $app->alias('vimeo', VimeoManager::class);
+        $this->app->alias('vimeo', VimeoManager::class);
     }
 
     /**
      * Register the bindings.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerBindings(Application $app)
+    protected function registerBindings()
     {
-        $app->bind('vimeo.connection', function ($app) {
+        $this->app->bind('vimeo.connection', function (Container $app) {
             $manager = $app['vimeo'];
 
             return $manager->connection();
         });
 
-        $app->alias('vimeo.connection', Vimeo::class);
+        $this->app->alias('vimeo.connection', Vimeo::class);
     }
 
     /**
