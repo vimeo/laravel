@@ -16,7 +16,7 @@ $vimeo->upload('/home/aaron/foo.mp4', false);
 Vimeo::uploadImage('/videos/123/images', '/home/aaron/bar.png', true);
 ```
 
-[![Build Status](https://img.shields.io/travis/vinkla/vimeo/master.svg?style=flat)](https://travis-ci.org/vinkla/vimeo)
+[![Build Status](https://img.shields.io/travis/vinkla/laravel-vimeo/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-vimeo)
 [![StyleCI](https://styleci.io/repos/25986926/shield?style=flat)](https://styleci.io/repos/25986926)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/vinkla/vimeo.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/vimeo/code-structure)
 [![Quality Score](https://img.shields.io/scrutinizer/g/vinkla/vimeo.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/vimeo)
