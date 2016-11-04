@@ -1,9 +1,8 @@
-Laravel Vimeo
-=============
+> Laravel Vimeo
 
 ![vimeo](https://cloud.githubusercontent.com/assets/499192/11158771/b3f80b2c-8a5a-11e5-82e5-5db4be19b4ce.png)
 
-Laravel [Vimeo](https://vimeo.com/) is a [Vimeo](https://vimeo.com/) bridge for Laravel 5 using the [official Vimeo package](https://github.com/vimeo/vimeo.php).
+> A [Vimeo](https://vimeo.com) bridge for Laravel.
 
 ```php
 // Fetching data.
@@ -18,8 +17,7 @@ Vimeo::uploadImage('/videos/123/images', '/home/aaron/bar.png', true);
 
 [![Build Status](https://img.shields.io/travis/vinkla/laravel-vimeo/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-vimeo)
 [![StyleCI](https://styleci.io/repos/25986926/shield?style=flat)](https://styleci.io/repos/25986926)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/vinkla/vimeo.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/vimeo/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/vinkla/vimeo.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/vimeo)
+[![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-vimeo.svg?style=flat)](https://codecov.io/github/vinkla/laravel-vimeo)
 [![Latest Version](https://img.shields.io/github/release/vinkla/vimeo.svg?style=flat)](https://github.com/vinkla/vimeo/releases)
 [![License](https://img.shields.io/packagist/l/vinkla/vimeo.svg?style=flat)](https://packagist.org/packages/vinkla/vimeo)
 
@@ -75,6 +73,7 @@ This facade will dynamically pass static method calls to the `vimeo` object in t
 This class contains no public methods of interest. This class should be added to the providers array in `config/app.php`. This class will setup ioc bindings.
 
 ### Examples
+
 Here you can see an example of just how simple this package is to use. Out of the box, the default adapter is `main`. After you enter your authentication details in the config file, it will just work:
 
 ```php
@@ -133,8 +132,9 @@ App::make('Foo')->bar();
 ```
 
 ## Documentation
+
 There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the official Vimeo package](https://github.com/vimeo/vimeo.php).
 
 ## License
 
-Laravel Vimeo is licensed under [The MIT License (MIT)](LICENSE).
+[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.com)
