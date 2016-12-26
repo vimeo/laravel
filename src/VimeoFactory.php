@@ -28,7 +28,7 @@ class VimeoFactory
      *
      * @return \Vimeo\Vimeo
      */
-    public function make(array $config)
+    public function make(array $config): Vimeo
     {
         $config = $this->getConfig($config);
 
@@ -44,7 +44,7 @@ class VimeoFactory
      *
      * @return array
      */
-    protected function getConfig(array $config)
+    protected function getConfig(array $config): array
     {
         $keys = ['client_id', 'client_secret'];
 
@@ -64,7 +64,7 @@ class VimeoFactory
      *
      * @return \Vimeo\Vimeo
      */
-    protected function getClient(array $auth)
+    protected function getClient(array $auth): Vimeo
     {
         return new Vimeo(
             $auth['client_id'],

@@ -13,6 +13,7 @@ namespace Vinkla\Vimeo;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
+use Vimeo\Vimeo;
 
 /**
  * This is the Vimeo manager class.
@@ -48,9 +49,9 @@ class VimeoManager extends AbstractManager
      *
      * @param array $config
      *
-     * @return mixed
+     * @return \Vimeo\Vimeo
      */
-    protected function createConnection(array $config)
+    protected function createConnection(array $config): Vimeo
     {
         return $this->factory->make($config);
     }
@@ -60,7 +61,7 @@ class VimeoManager extends AbstractManager
      *
      * @return string
      */
-    protected function getConfigName()
+    protected function getConfigName(): string
     {
         return 'vimeo';
     }
@@ -70,7 +71,7 @@ class VimeoManager extends AbstractManager
      *
      * @return \Vinkla\Vimeo\VimeoFactory
      */
-    public function getFactory()
+    public function getFactory(): VimeoFactory
     {
         return $this->factory;
     }

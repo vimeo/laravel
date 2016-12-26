@@ -11,16 +11,16 @@
         }
     ],
     "require": {
-        "php": "^5.6.4 || ^7.0",
-        "illuminate/contracts": "5.2.* || 5.3.*",
-        "illuminate/support": "5.2.* || 5.3.*",
+        "php": "^7.0",
+        "illuminate/contracts": "5.3.*",
+        "illuminate/support": "5.3.*",
         "graham-campbell/manager": "^2.4",
-        "vimeo/vimeo-api": "^1.2.3"
+        "vimeo/vimeo-api": "^1.2.6"
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.2",
         "mockery/mockery": "^0.9.5",
-        "phpunit/phpunit": "^5.6"
+        "phpunit/phpunit": "^5.7"
     },
     "autoload": {
         "psr-4": {
@@ -37,7 +37,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.4-dev"
+            "dev-master": "3.5-dev"
         }
     },
     "minimum-stability": "dev",
