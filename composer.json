@@ -38,6 +38,14 @@
     "extra": {
         "branch-alias": {
             "dev-master": "3.5-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Vinkla\\Vimeo\\VimeoServiceProvider"
+            ],
+            "aliases": {
+                "Vimeo": "Vinkla\\Vimeo\\Facades\\Vimeo"
+            }
         }
     },
     "minimum-stability": "dev",
