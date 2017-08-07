@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.6.0 (released 2017-08-07)
+
+- Added laravel 5.5 support
+
 ## 3.5.0 (released 2017-01-01)
 
 - Added laravel 5.4 support
