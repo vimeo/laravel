@@ -115,17 +115,17 @@ use Vinkla\Vimeo\VimeoManager;
 
 class Foo
 {
-	protected $vimeo;
+    protected $vimeo;
 
-	public function __construct(VimeoManager $vimeo)
-	{
-		$this->vimeo = $vimeo;
-	}
+    public function __construct(VimeoManager $vimeo)
+    {
+        $this->vimeo = $vimeo;
+    }
 
-	public function bar()
-	{
-		$this->vimeo->upload('/foo.mp4', false);
-	}
+    public function bar()
+    {
+        $this->vimeo->upload('/foo.mp4', false);
+    }
 }
 
 App::make('Foo')->bar();
