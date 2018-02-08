@@ -1,7 +1,7 @@
 <?php
 
 /**
- *   Copyright 2018 Vimeo
+ *   Copyright 2018 Vimeo.
  *
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
@@ -15,15 +15,14 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
-
 declare(strict_types=1);
 
 namespace Vimeo\Tests\Laravel\Facades;
 
 use GrahamCampbell\TestBenchCore\FacadeTrait;
-use Vimeo\Tests\Laravel\AbstractTestCase;
 use Vimeo\Laravel\Facades\Vimeo;
 use Vimeo\Laravel\VimeoManager;
+use Vimeo\Tests\Laravel\AbstractTestCase;
 
 /**
  * This is the Vimeo facade test class.
