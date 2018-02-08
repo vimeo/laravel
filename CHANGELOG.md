@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 4.0.0 (2018-02-08)
+
+- Added PHPUnit 7.0 support
+- Added vimeo/vimeo 2.0 support
+- Rename the package to vimeo/laravel
+- Update the license to Apache 2.0
+- Update the namespace to Vimeo
+
 ## 3.7.0 (released 2017-09-02)
 
 - Removed laravel 5.3 and 5.4 support

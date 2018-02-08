@@ -15,29 +15,29 @@ $vimeo->upload('/home/aaron/foo.mp4', false);
 Vimeo::uploadImage('/videos/123/images', '/home/aaron/bar.png', true);
 ```
 
-[![Build Status](https://img.shields.io/travis/vinkla/laravel-vimeo/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-vimeo)
+[![Build Status](https://img.shields.io/travis/vimeo/laravel/master.svg?style=flat)](https://travis-ci.org/vimeo/laravel)
 [![StyleCI](https://styleci.io/repos/25986926/shield?style=flat)](https://styleci.io/repos/25986926)
-[![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-vimeo.svg?style=flat)](https://codecov.io/github/vinkla/laravel-vimeo)
-[![Latest Version](https://img.shields.io/github/release/vinkla/vimeo.svg?style=flat)](https://github.com/vinkla/vimeo/releases)
-[![License](https://img.shields.io/packagist/l/vinkla/vimeo.svg?style=flat)](https://packagist.org/packages/vinkla/vimeo)
+[![Coverage Status](https://img.shields.io/codecov/c/github/vimeo/laravel.svg?style=flat)](https://codecov.io/github/vimeo/laravel)
+[![Latest Version](https://img.shields.io/github/release/vimeo/laravel.svg?style=flat)](https://github.com/vimeo/laravel/releases)
+[![License](https://img.shields.io/packagist/l/vimeo/laravel.svg?style=flat)](https://packagist.org/packages/vimeo/laravel)
 
 ## Installation
-Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
+Require this package, with [Composer](https://getcomposer.org), in the root directory of your project.
 
 ```bash
-$ composer require vinkla/vimeo
+$ composer require vimeo/laravel
 ```
 
 Add the service provider to `config/app.php` in the `providers` array, or if you're using Laravel 5.5, this can be done via the automatic package discovery.
 
 ```php
-Vinkla\Vimeo\VimeoServiceProvider::class
+Vimeo\Laravel\VimeoServiceProvider::class
 ```
 
 If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in `config/app.php` to your aliases array.
 
 ```php
-'Vimeo' => Vinkla\Vimeo\Facades\Vimeo::class
+'Vimeo' => Vimeo\Laravel\Facades\Vimeo::class
 ```
 
 ## Configuration
@@ -78,7 +78,7 @@ Here you can see an example of just how simple this package is to use. Out of th
 
 ```php
 // You can alias this in config/app.php.
-use Vinkla\Vimeo\Facades\Vimeo;
+use Vimeo\Laravel\Facades\Vimeo;
 
 Vimeo::request('/me/videos', ['per_page' => 10], 'GET');
 // We're done here - how easy was that, it just works!
@@ -90,7 +90,7 @@ Vimeo::upload('/bar.mp4', false);
 The Vimeo manager will behave like it is a `Vimeo\Vimeo`. If you want to call specific connections, you can do that with the connection method:
 
 ```php
-use Vinkla\Vimeo\Facades\Vimeo;
+use Vimeo\Laravel\Facades\Vimeo;
 
 // Writing this…
 Vimeo::connection('main')->upload('/bar.mp4');
@@ -111,7 +111,7 @@ Vimeo::setDefaultConnection('alternative'); // The default is now alternative.
 If you prefer to use dependency injection over facades like me, then you can inject the manager:
 
 ```php
-use Vinkla\Vimeo\VimeoManager;
+use Vimeo\Laravel\VimeoManager;
 
 class Foo
 {
@@ -137,4 +137,4 @@ There are other classes in this package that are not documented here. This is be
 
 ## License
 
-[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.com)
+[Apache License 2.0](LICENSE) © [Vimeo](https://vimeo.com/)
