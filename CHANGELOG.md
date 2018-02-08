@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.0.0 (upcoming)
+
+- Added vimeo/vimeo 2.0 support
+- Rename the package to vimeo/laravel
+
 ## 3.7.0 (released 2017-09-02)
 
 - Removed laravel 5.3 and 5.4 support

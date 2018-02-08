@@ -1,5 +1,5 @@
 {
-    "name": "vinkla/vimeo",
+    "name": "vimeo/laravel",
     "description": "A Vimeo bridge for Laravel",
     "license": "MIT",
     "keywords": ["laravel", "vimeo", "video"],
@@ -15,23 +15,22 @@
         "illuminate/contracts": "5.5.*",
         "illuminate/support": "5.5.*",
         "graham-campbell/manager": "^3.0",
-        "vimeo/vimeo-api": "^1.2.6"
+        "vimeo/vimeo-api": "^2.0"
     },
     "require-dev": {
-        "graham-campbell/analyzer": "^1.1",
-        "graham-campbell/testbench": "^4.0",
+        "graham-campbell/analyzer": "^2.0",
+        "graham-campbell/testbench": "^5.0",
         "mockery/mockery": "^1.0",
-        "orchestra/testbench": "^3.5",
-        "phpunit/phpunit": "^6.3"
+        "phpunit/phpunit": "^7.0"
     },
     "autoload": {
         "psr-4": {
-            "Vinkla\\Vimeo\\": "src/"
+            "Vimeo\\Laravel\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vinkla\\Tests\\Vimeo\\": "tests/"
+            "Vimeo\\Tests\\Laravel\\": "tests/"
         }
     },
     "config": {
@@ -39,14 +38,14 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.7-dev"
+            "dev-master": "4.0-dev"
         },
         "laravel": {
             "providers": [
-                "Vinkla\\Vimeo\\VimeoServiceProvider"
+                "Vimeo\\Laravel\\VimeoServiceProvider"
             ],
             "aliases": {
-                "Vimeo": "Vinkla\\Vimeo\\Facades\\Vimeo"
+                "Vimeo": "Vimeo\\Laravel\\Facades\\Vimeo"
             }
         }
     },
