@@ -1,4 +1,8 @@
 # CHANGELOG
+## 5.0.0 (2018-02-13)
+
+- Only supporting PHP 7.1+
+- Upgraded Laravel to 5.6
 
 ## 4.0.0 (2018-02-08)
 
