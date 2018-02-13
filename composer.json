@@ -12,9 +12,9 @@
     ],
     "require": {
         "php": "^7.0",
-        "illuminate/contracts": "5.5.*",
-        "illuminate/support": "5.5.*",
-        "graham-campbell/manager": "^3.0",
+        "illuminate/contracts": "5.6.*",
+        "illuminate/support": "5.6.*",
+        "graham-campbell/manager": "^4.0",
         "vimeo/vimeo-api": "^2.0"
     },
     "require-dev": {
