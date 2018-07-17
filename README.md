@@ -9,7 +9,7 @@
 $vimeo->request('/users/dashron', ['per_page' => 2], 'GET');
 
 // Upload videos.
-$vimeo->upload('/home/aaron/foo.mp4', false);
+$vimeo->upload('/home/aaron/foo.mp4');
 
 // Want to use a facade?
 Vimeo::uploadImage('/videos/123/images', '/home/aaron/bar.png', true);
@@ -124,7 +124,7 @@ class Foo
 
     public function bar()
     {
-        $this->vimeo->upload('/foo.mp4', false);
+        $this->vimeo->upload('/foo.mp4');
     }
 }
 
