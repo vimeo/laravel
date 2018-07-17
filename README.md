@@ -83,7 +83,7 @@ use Vimeo\Laravel\Facades\Vimeo;
 Vimeo::request('/me/videos', ['per_page' => 10], 'GET');
 // We're done here - how easy was that, it just works!
 
-Vimeo::upload('/bar.mp4', false);
+Vimeo::upload('/bar.mp4');
 // This example is simple and there are far more methods available.
 ```
 
