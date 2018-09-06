@@ -1,71 +1,95 @@
-# CHANGELOG
-## 5.0.0 (2018-02-13)
+# Changelog
+## [5.1.0] - 2018-09-06
+### Changed
+- Upgraded Laravel to 5.7.
 
-- Only supporting PHP 7.1+
-- Upgraded Laravel to 5.6
+## [5.0.0] - 2018-02-13
+### Changed
+- Only supporting PHP 7.1+.
+- Upgraded Laravel to 5.6.
 
-## 4.0.0 (2018-02-08)
+## [4.0.0] - 2018-02-08
+### Changed
+- Added PHPUnit 7.0 support.
+- Added `vimeo/vimeo` 2.0 support.
+- Rename the package to `vimeo/laravel`
+- Update the license to Apache 2.0.
+- Update the namespace to Vimeo.
 
-- Added PHPUnit 7.0 support
-- Added vimeo/vimeo 2.0 support
-- Rename the package to vimeo/laravel
-- Update the license to Apache 2.0
-- Update the namespace to Vimeo
+## [3.7.0] - 2017-09-02
+### Removed
+- Removed Laravel 5.3 and 5.4 support.
 
-## 3.7.0 (released 2017-09-02)
+## [3.6.0] - 2017-08-07
+### Changed
+- Added Laravel 5.5 support
 
-- Removed laravel 5.3 and 5.4 support
+## [3.5.0] - 2017-01-01
+### Changed
+- Added Laravel 5.4 support.
 
-## 3.6.0 (released 2017-08-07)
+### Removed
+- Dropped PHP 5.6 support.
 
-- Added laravel 5.5 support
+## [3.4.0] - 2016-07-11
+### Removed
+- Dropped PHP 5.5 support.
 
-## 3.5.0 (released 2017-01-01)
+## [3.3.0] - 2016-05-05
+### Changed
+- Added Laravel 5.3 support.
 
-- Added laravel 5.4 support
-- Dropped php 5.6 support
-
-## 3.4.0 (released 2016-07-11)
-
-- Dropped php 5.5 support
-
-## 3.3.0 (released 2016-05-05)
-
-- Added laravel 5.3 support
-
-## 3.2.2 (released 2016-01-30)
-
+## [3.2.2] - 2016-01-30
+### Added
 - Improved service provider
 
-## 3.2.1 (released 2016-01-17)
-
+## [3.2.1] - 2016-01-17
+### Added
 - Lumen 5.2 support
 
-## 3.2.0 (released 2015-11-14)
-
+## [3.2.0] - 2015-11-14
+### Added
 - Laravel 5.2 support
 - Update dependencies
 
-## 3.1.0 (released 2015-10-07)
-
+## [3.1.0] - 2015-10-07
+### Changed
 - Improved Lumen support
 
-## 3.0.0 (released 2015-06-30)
-
+## [3.0.0] - 2015-06-30
+### Changed
 - Official Lumen support
 - Code cleanup
 - Moved the factory
 - Container binding improvements
 
-## 2.1.0 (released 2015-05-07)
-
+## [2.1.0] - 2015-05-07
+### Changed
 - Support both Laravel 5.0 and 5.1
+
+### Removed
 - Dropped PHP 5.4 support
 
-## 2.0.0 (released 2015-02-05)
-
+## [2.0.0] - 2015-02-05
+### Added
 - Laravel 5.0 release
 
-## 1.0.0 (released 2015-01-21)
-
+## 1.0.0 - 2015-01-21
+### Added
 - First stable release with Larvel 4 support
+
+[5.1.0]: https://github.com/vimeo/laravel/compare/5.0.0...5.1.0
+[5.0.0]: https://github.com/vimeo/laravel/compare/4.0.0...5.0.0
+[4.0.0]: https://github.com/vimeo/laravel/compare/3.7.0...4.0.0
+[3.7.0]: https://github.com/vimeo/laravel/compare/3.6.0...3.7.0
+[3.6.0]: https://github.com/vimeo/laravel/compare/3.5.0...3.6.0
+[3.5.0]: https://github.com/vimeo/laravel/compare/3.4.0...3.5.0
+[3.4.0]: https://github.com/vimeo/laravel/compare/3.3.0...3.4.0
+[3.3.0]: https://github.com/vimeo/laravel/compare/3.2.2...3.3.0
+[3.2.2]: https://github.com/vimeo/laravel/compare/3.2.1...3.2.2
+[3.2.1]: https://github.com/vimeo/laravel/compare/3.2.0...3.2.1
+[3.2.0]: https://github.com/vimeo/laravel/compare/3.1.0...3.2.0
+[3.1.0]: https://github.com/vimeo/laravel/compare/3.0.0...3.1.0
+[3.0.0]: https://github.com/vimeo/laravel/compare/2.1.0...3.0.0
+[2.1.0]: https://github.com/vimeo/laravel/compare/2.0.0...2.1.0
+[2.0.0]: https://github.com/vimeo/laravel/compare/1.0.0...2.0.0
