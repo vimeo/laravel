@@ -19,7 +19,7 @@
         "illuminate/contracts": "5.7.*",
         "illuminate/support": "5.7.*",
         "graham-campbell/manager": "^4.0",
-        "vimeo/vimeo-api": "^2.0"
+        "vimeo/vimeo-api": "^3.0"
     },
     "require-dev": {
         "graham-campbell/analyzer": "^2.0",
