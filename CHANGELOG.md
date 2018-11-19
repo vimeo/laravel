@@ -1,4 +1,8 @@
 # Changelog
+## [5.2.0] - 2018-11-19
+### Changed
+- Upgraded `vimeo/vimeo` to 3.0.
+
 ## [5.1.0] - 2018-09-06
 ### Changed
 - Upgraded Laravel to 5.7.
@@ -78,6 +82,7 @@
 ### Added
 - First stable release with Larvel 4 support
 
+[5.2.0]: https://github.com/vimeo/laravel/compare/5.1.0...5.2.0
 [5.1.0]: https://github.com/vimeo/laravel/compare/5.0.0...5.1.0
 [5.0.0]: https://github.com/vimeo/laravel/compare/4.0.0...5.0.0
 [4.0.0]: https://github.com/vimeo/laravel/compare/3.7.0...4.0.0
