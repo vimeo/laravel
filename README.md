@@ -50,6 +50,22 @@ $ php artisan vendor:publish
 
 This will create a `config/vimeo.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
 
+You are free to change the configuration file as needed, but the default expected values are below:
+
+```php
+VIMEO_CLIENT=
+VIMEO_SECRET=
+VIMEO_ACCESS=
+```
+
+and for setting up the alternate connection...
+
+```php
+VIMEO_ALT_CLIENT=
+VIMEO_ALT_SECRET=
+VIMEO_ALT_ACCESS=
+```
+
 #### Default Connection Name
 
 This option `default` is where you may specify which of the connections below you wish to use as your default connection for all work. Of course, you may use many connections at once using the manager class. The default value for this setting is `main`.
