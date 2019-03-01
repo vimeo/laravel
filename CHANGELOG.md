@@ -1,4 +1,8 @@
 # Changelog
+## [5.3.0] - 2019-03-01
+### Changed
+- Upgraded Laravel to 5.8. [#46](https://github.com/vimeo/laravel/pull/46)
+
 ## [5.2.1] - 2019-02-04
 ### Changed
 - Settings can now be configured via Laravel environment variables. [#44](https://github.com/vimeo/laravel/pull/44)
@@ -86,6 +90,7 @@
 ### Added
 - First stable release with Larvel 4 support
 
+[5.3.0]: https://github.com/vimeo/laravel/compare/5.2.1...5.3.0
 [5.2.1]: https://github.com/vimeo/laravel/compare/5.2.0...5.2.1
 [5.2.0]: https://github.com/vimeo/laravel/compare/5.1.0...5.2.0
 [5.1.0]: https://github.com/vimeo/laravel/compare/5.0.0...5.1.0
