@@ -32,7 +32,7 @@ class VimeoFactory
     /**
      * Make a new Vimeo client.
      *
-     * @param array $config
+     * @param string[] $config
      *
      * @return \Vimeo\Vimeo
      */
@@ -50,7 +50,7 @@ class VimeoFactory
      *
      * @throws \InvalidArgumentException
      *
-     * @return array
+     * @return string[]
      */
     protected function getConfig(array $config): array
     {
@@ -68,7 +68,7 @@ class VimeoFactory
     /**
      * Get the Vimeo client.
      *
-     * @param array $auth
+     * @param string[] $auth
      *
      * @return \Vimeo\Vimeo
      */
