@@ -51,6 +51,10 @@ class VimeoServiceProvider extends ServiceProvider
     {
         $source = realpath(__DIR__.'/../config/vimeo.php');
 
+        if (!$source) {
+            throw new \UnexpectedValueException('Could not locate config');
+        }
+
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([$source => config_path('vimeo.php')]);
         } elseif ($this->app instanceof LumenApplication) {
@@ -79,7 +83,7 @@ class VimeoServiceProvider extends ServiceProvider
      */
     protected function registerFactory()
     {
-        $this->app->singleton('vimeo.factory', function () {
+        $this->app->singleton('vimeo.factory', function () : VimeoFactory {
             return new VimeoFactory();
         });
 
@@ -93,8 +97,10 @@ class VimeoServiceProvider extends ServiceProvider
      */
     protected function registerManager()
     {
-        $this->app->singleton('vimeo', function (Container $app) {
+        $this->app->singleton('vimeo', function (Container $app) : VimeoManager {
+            /** @var \Illuminate\Contracts\Config\Repository */
             $config = $app['config'];
+            /** @var \Vimeo\Laravel\VimeoFactory */
             $factory = $app['vimeo.factory'];
 
             return new VimeoManager($config, $factory);
@@ -110,9 +116,11 @@ class VimeoServiceProvider extends ServiceProvider
      */
     protected function registerBindings()
     {
-        $this->app->bind('vimeo.connection', function (Container $app) {
+        $this->app->bind('vimeo.connection', function (Container $app) : Vimeo {
+            /** @var VimeoManager */
             $manager = $app['vimeo'];
 
+            /** @var Vimeo */
             return $manager->connection();
         });
 
