@@ -1,7 +1,7 @@
 # Changelog
 ## [5.3.2] - 2019-03-04
 ### Changed
-- Updating [psalm/plugin-laravel](https://github.com/psalm/laravel-psalm-plugin). [48](https://github.com/vimeo/laravel/pull/48)
+- Updating [psalm/plugin-laravel](https://github.com/psalm/laravel-psalm-plugin). [#48](https://github.com/vimeo/laravel/pull/48)
 
 ## [5.3.1] - 2019-03-04
 ### Fixed
