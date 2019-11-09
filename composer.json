@@ -1,5 +1,5 @@
 {
-    "name": "safwan-ad-dardak/laravel",
+    "name": "vimeo/laravel",
     "description": "A Vimeo bridge for Laravel",
     "license": "Apache-2.0",
     "keywords": ["laravel", "vimeo", "video"],
