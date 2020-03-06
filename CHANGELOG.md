@@ -1,4 +1,8 @@
 # Changelog
+## [5.3.3] - 2019-11-19
+### Changed
+- Upgraded `vimeo/vimeo-api` to 3.0.3
+
 ## [5.3.2] - 2019-03-04
 ### Changed
 - Updating [psalm/plugin-laravel](https://github.com/psalm/laravel-psalm-plugin). [#48](https://github.com/vimeo/laravel/pull/48)
@@ -98,6 +102,7 @@
 ### Added
 - First stable release with Larvel 4 support
 
+[5.3.3]: https://github.com/vimeo/laravel/compare/5.3.2...5.3.3
 [5.3.2]: https://github.com/vimeo/laravel/compare/5.3.1...5.3.2
 [5.3.1]: https://github.com/vimeo/laravel/compare/5.3.0...5.3.1
 [5.3.0]: https://github.com/vimeo/laravel/compare/5.2.1...5.3.0
