@@ -27,9 +27,9 @@
         "graham-campbell/testbench": "^5.2",
         "mockery/mockery": "^1.0",
         "phpunit/phpunit": "^7.0",
-        "psalm/plugin-laravel": "^0.4",
+        "psalm/plugin-laravel": "^1.4.0",
         "laravel/lumen-framework": "^5.7",
-        "vimeo/psalm": "^3.1"
+        "vimeo/psalm": "^3.17"
     },
     "autoload": {
         "psr-4": {
