@@ -2,7 +2,11 @@
     "name": "vimeo/laravel",
     "description": "A Vimeo bridge for Laravel",
     "license": "Apache-2.0",
-    "keywords": ["laravel", "vimeo", "video"],
+    "keywords": [
+        "laravel",
+        "vimeo",
+        "video"
+    ],
     "authors": [
         {
             "name": "Jon Ursenbach",
@@ -16,20 +20,20 @@
     ],
     "require": {
         "php": "^7.2|^8.0",
-        "illuminate/contracts": "^5.8|^6.0|^7.0|^8.0",
-        "illuminate/support": "^5.8|^6.0|^7.0|^8.0",
+        "illuminate/contracts": "^5.8|^6.0|^7.0|^8.0|^9.0",
+        "illuminate/support": "^5.8|^6.0|^7.0|^8.0|^9.0",
         "graham-campbell/manager": "^4.0",
-        "vimeo/vimeo-api": "^3.0.3"
+        "vimeo/vimeo-api": "^3.0.3|^3.0"
     },
     "require-dev": {
-        "laravel/framework": "^5.8|^6.0|^7.0|^8.0",
+        "laravel/framework": "^5.8|^6.0|^7.0|^8.0|^9.0",
         "graham-campbell/analyzer": "^2.0",
         "graham-campbell/testbench": "^5.2",
         "mockery/mockery": "^1.0",
-        "phpunit/phpunit": "^7.0",
-        "psalm/plugin-laravel": "^1.4.0",
+        "phpunit/phpunit": "^7.0|^9.5.10",
+        "psalm/plugin-laravel": "^1.4.0|^1.1",
         "laravel/lumen-framework": "^5.7",
-        "vimeo/psalm": "^3.17"
+        "vimeo/psalm": "^3.17|^4.19"
     },
     "autoload": {
         "psr-4": {
