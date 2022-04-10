@@ -5,7 +5,7 @@ namespace Vimeo\Laravel\Rules;
 use Illuminate\Contracts\Validation\Rule;
 use Vimeo\Laravel\Facades\Vimeo;
 
-class VimeoVideoIdRule implements Rule
+class VimeoVideoId implements Rule
 {
     /**
      * Determine if the validation rule passes.
