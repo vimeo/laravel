@@ -13,6 +13,20 @@ $vimeo->upload('/home/aaron/foo.mp4');
 
 // Want to use a facade?
 Vimeo::uploadImage('/videos/123/images', '/home/aaron/bar.png', true);
+Vimeo::upload($video, [
+    'name' => NAME,
+    'privacy.view' => [
+        'anybody',
+        'contacts',
+        'disable',
+        'nobody',
+        'password',
+        'unlisted',
+        'users'
+    ],
+    'folder_uri' => 'https://vimeo.com/manage/folders_name/folder_id'
+]);
+Vimeo::request('/videos/'. $value, ['per_page' => 2], 'GET');
 ```
 
 [![Build Status](https://img.shields.io/travis/vimeo/laravel/master.svg?style=flat)](https://travis-ci.org/vimeo/laravel)
