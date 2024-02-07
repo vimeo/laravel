@@ -20,21 +20,22 @@ declare(strict_types=1);
 namespace Vimeo\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
+use \Vimeo\Vimeo as Connection;
 
 /**
  * This is the Vimeo facade class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  * 
- * @method static Vimeo connection(string $name = null)
- * @method static Vimeo reconnect(string $name = null)
+ * @method static Connection connection(string $name = null)
+ * @method static Connection reconnect(string $name = null)
  * @method static void disconnect(string $name = null)
  * @method static array getConnectionConfig(string $name = null)
  * @method static string getDefaultConnection()
  * @method static void setDefaultConnection(string $name)
  * @method static void extend(string $name, callable $resolver)
- * @method static array<Vimeo> getConnections()
- * 
+ * @method static array<Connection> getConnections()
+ *
  * @method static array request($url, array $params, string $method = 'GET', bool $json_body = true, array $headers)
  * @method static void setCURLOptions(array $curl_opts = array())
  * @method static void setProxy(string $proxy_address, string $proxy_port = null, string $proxy_userpwd = null)
