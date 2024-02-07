@@ -36,7 +36,7 @@ use \Vimeo\Vimeo as Connection;
  * @method static void extend(string $name, callable $resolver)
  * @method static array<Connection> getConnections()
  *
- * @method static array request($url, array $params, string $method = 'GET', bool $json_body = true, array $headers)
+ * @method static array request($url, array $params = [], string $method = 'GET', bool $json_body = true, array $headers = [])
  * @method static void setCURLOptions(array $curl_opts = array())
  * @method static void setProxy(string $proxy_address, string $proxy_port = null, string $proxy_userpwd = null)
  * @method static array accessToken(string $code, string $redirect_uri)
