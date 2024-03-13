@@ -57,9 +57,9 @@ class VimeoManager extends AbstractManager
      *
      * @param array $config
      *
-     * @return \Vimeo\Vimeo
+     * @return object
      */
-    protected function createConnection(array $config): Vimeo
+    protected function createConnection(array $config): object
     {
         /** @var string[] $config */
         return $this->factory->make($config);
