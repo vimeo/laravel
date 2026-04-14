@@ -29,6 +29,8 @@ use Vimeo\Vimeo;
  * This is the Vimeo service provider class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
+ *
+ * @psalm-api
  */
 class VimeoServiceProvider extends ServiceProvider
 {
@@ -51,7 +53,7 @@ class VimeoServiceProvider extends ServiceProvider
     {
         $source = realpath(__DIR__.'/../config/vimeo.php');
 
-        if (!$source) {
+        if ($source === false) {
             throw new \UnexpectedValueException('Could not locate config');
         }
 
@@ -69,6 +71,7 @@ class VimeoServiceProvider extends ServiceProvider
      *
      * @return void
      */
+    #[\Override]
     public function register()
     {
         $this->registerFactory();
@@ -99,9 +102,9 @@ class VimeoServiceProvider extends ServiceProvider
     {
         $this->app->singleton('vimeo', function (Container $app) : VimeoManager {
             /** @var \Illuminate\Contracts\Config\Repository */
-            $config = $app['config'];
+            $config = $app->make('config');
             /** @var \Vimeo\Laravel\VimeoFactory */
-            $factory = $app['vimeo.factory'];
+            $factory = $app->make('vimeo.factory');
 
             return new VimeoManager($config, $factory);
         });
@@ -118,7 +121,7 @@ class VimeoServiceProvider extends ServiceProvider
     {
         $this->app->bind('vimeo.connection', function (Container $app) : Vimeo {
             /** @var VimeoManager */
-            $manager = $app['vimeo'];
+            $manager = $app->make('vimeo');
 
             /** @var Vimeo */
             return $manager->connection();
@@ -132,6 +135,7 @@ class VimeoServiceProvider extends ServiceProvider
      *
      * @return string[]
      */
+    #[\Override]
     public function provides(): array
     {
         return [

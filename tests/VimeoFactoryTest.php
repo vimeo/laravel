@@ -42,11 +42,10 @@ class VimeoFactoryTest extends AbstractTestCase
         $this->assertInstanceOf(Vimeo::class, $return);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testMakeWithoutClientId()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $factory = $this->getVimeoFactory();
 
         $factory->make([
@@ -54,11 +53,10 @@ class VimeoFactoryTest extends AbstractTestCase
         ]);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testMakeWithoutClientSecret()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $factory = $this->getVimeoFactory();
 
         $factory->make([

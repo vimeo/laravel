@@ -27,6 +27,8 @@ use Vimeo\Vimeo;
  * This is the Vimeo manager class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
+ *
+ * @psalm-api
  */
 class VimeoManager extends AbstractManager
 {
@@ -57,8 +59,11 @@ class VimeoManager extends AbstractManager
      *
      * @param array $config
      *
+     * @psalm-suppress MethodSignatureMismatch
+     *
      * @return \Vimeo\Vimeo
      */
+    #[\Override]
     protected function createConnection(array $config): Vimeo
     {
         /** @var string[] $config */
@@ -70,16 +75,13 @@ class VimeoManager extends AbstractManager
      *
      * @return string
      */
+    #[\Override]
     protected function getConfigName(): string
     {
         return 'vimeo';
     }
 
-    /**
-     * Get the factory instance.
-     *
-     * @return \Vimeo\Laravel\VimeoFactory
-     */
+    /** @psalm-api */
     public function getFactory(): VimeoFactory
     {
         return $this->factory;

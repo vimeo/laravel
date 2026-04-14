@@ -27,6 +27,8 @@ use Illuminate\Support\Arr;
  * The is the Vimeo factory class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
+ *
+ * @psalm-api
  */
 class VimeoFactory
 {
