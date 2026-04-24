@@ -38,7 +38,7 @@ class VimeoTest extends AbstractTestCase
      *
      * @return string
      */
-    protected function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return 'vimeo';
     }
@@ -48,7 +48,7 @@ class VimeoTest extends AbstractTestCase
      *
      * @return string
      */
-    protected function getFacadeClass()
+    protected static function getFacadeClass(): string
     {
         return Vimeo::class;
     }
@@ -58,7 +58,7 @@ class VimeoTest extends AbstractTestCase
      *
      * @return string
      */
-    protected function getFacadeRoot()
+    protected static function getFacadeRoot(): string
     {
         return VimeoManager::class;
     }

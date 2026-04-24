@@ -25,6 +25,8 @@ use Illuminate\Support\Facades\Facade;
  * This is the Vimeo facade class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
+ *
+ * @psalm-api
  */
 class Vimeo extends Facade
 {
@@ -33,6 +35,7 @@ class Vimeo extends Facade
      *
      * @return string
      */
+    #[\Override]
     protected static function getFacadeAccessor(): string
     {
         return 'vimeo';

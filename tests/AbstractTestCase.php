@@ -36,7 +36,7 @@ abstract class AbstractTestCase extends AbstractPackageTestCase
      *
      * @return string
      */
-    protected function getServiceProviderClass($app)
+    protected static function getServiceProviderClass(): string
     {
         return VimeoServiceProvider::class;
     }
