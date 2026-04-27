@@ -23,7 +23,7 @@
         "illuminate/contracts": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
         "illuminate/support": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
         "graham-campbell/manager": "^5.0",
-        "vimeo/vimeo-api": "^3.0"
+        "vimeo/vimeo-api": "^3.0|^4.0"
     },
     "require-dev": {
         "laravel/framework": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
